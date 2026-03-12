@@ -1491,7 +1491,13 @@ export default function App() {
         }}
       >
         {config.enableBorderShine && (
-          <div className="border-shine-wrapper" />
+          <div 
+            className="border-shine-wrapper" 
+            style={{ 
+              maskComposite: 'exclude', 
+              WebkitMaskComposite: 'xor' 
+            }} 
+          />
         )}
 
         {/* Animated Background Layers */}
